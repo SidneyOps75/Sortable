@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <title>Superhero Database</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Superhero Database</h1>
+
+        <div class="control-area">
+          <input
+            type="text"
+            id="searchField"
+            placeholder="Enter name to search"
+          />
+
+          <select id="pageSize">
+            <option value="10">10 results</option>
+            <option value="20" selected>20 results</option>
+            <option value="50">50 results</option>
+            <option value="100">100 results</option>
+            <option value="all">All results</option>
+          </select>
+        </div>
+
+        <div class="results-display">
+          <table id="heroTable">
+            <thead>
+              <tr>
+                <th data-sort="icon">Icon</th>
+                <th data-sort="name">Name</th>
+                <th data-sort="full-name">Full Name</th>
+                <th data-sort="intelligence">Intelligence</th>
+                <th data-sort="strength">Strength</th>
+                <th data-sort="speed">Speed</th>
+                <th data-sort="durability">Durability</th>
+                <th data-sort="power">Power</th>
+                <th data-sort="combat">Combat</th>
+                <th data-sort="race">Race</th>
+                <th data-sort="gender">Gender</th>
+                <th data-sort="height">Height</th>
+                <th data-sort="weight">Weight</th>
+                <th data-sort="place-of-birth">Place Of Birth</th>
+                <th data-sort="alignment">Alignment</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </main>
+
+    <script type="module" src="/static/script.js"></script>
+  </body>
+</html>

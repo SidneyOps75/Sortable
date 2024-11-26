@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Updated to use Roboto */
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(135deg, #f0e3f1, #d6c1e3);
+}
+
+body,
+.container {
+  display: grid;
+  place-items: center;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  margin: 25px auto;
+  padding: 20px 10px;
+  row-gap: 20px;
+  background: linear-gradient(white, #fffdf6);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+
+.control-area {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  right: 20px;
+}
+
+.control-area input,
+.control-area select {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: 1px solid #949ab1;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.control-area input:focus,
+.control-area select:hover {
+  border-color: #6a5acd;
+}
+
+.results-display {
+  width: 100%;
+}
+
+.results-display table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background: linear-gradient(135deg, #6a5acd, #4c3d99);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+tbody tr:hover {
+  background: rgba(106, 93, 205, 0.1); /* Light hover effect */
+}
+
+td img.icon {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the icon circular */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  transition: transform 0.2s ease; /* Add hover effect */
+}
+
+td img.icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6a5acd, #4c3d99);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.pagination button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5a4fbc, #403f7c);
+}
+
+.pagination button:active {
+  transform: scale(0.95);
+}
